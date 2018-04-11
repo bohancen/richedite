@@ -1,0 +1,14 @@
+body,li,ul{margin:0;padding:0;list-style: none;}
+body{background-color: #fff;}
+img{display: block;margin-top: 10px;margin-bottom:10px;max-width: 100%;}
+.list{margin:10px;}
+.list li{    
+    padding:10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+    /* box-shadow: 0 1px 3px rgba(26,26,26,.1); */
+    /* box-sizing: border-box; */
+}
