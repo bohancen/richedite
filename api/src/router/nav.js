@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-
+import { Link ,h} from 'react-router-dom'
 import arryNav from './router'
 const Nav = () => {
    
@@ -16,7 +15,9 @@ const Nav = () => {
                         item.item.map((item)=>{
                            return(
                               <li>
-                                 <Link className={window.location.href.indexOf(item.name.replace(/\s/g, '_'))>-1?'cur':''} to={`/${item.name.replace(/\s/g,'_')}`}>{item.name}</Link>
+                                 <Link className={
+                                       window.location.pathname.replace('/','') === item.name.replace(/\s/g, '_') ? 'cur' : ''
+                                     } to={`/${item.name.replace(/\s/g,'_')}`}>{item.name}</Link>
                               </li>
                            )
                         })

@@ -76,7 +76,7 @@ by matching the Draft block render map with the matched tag.</p>
 <a href="http://facebook.github.io/immutable-js/docs/#/Map">Immutable Map</a> to
 the editor blockRender props.</p>
 <p><em>example of overwritting default block render map:</em></p>
-<pre class="prism language-js"><span class="token comment">// The example below deliberately only allows</span>
+<code class="prism language-js"><span class="token comment">// The example below deliberately only allows</span>
 <span class="token comment">// 'heading-two' as the only valid block type and</span>
 <span class="token comment">// updates the unstyled element to also become a h2.</span>
 <span class="token keyword">const</span> blockRenderMap <span class="token operator">=</span> Immutable<span class="token punctuation">.</span><span class="token function">Map</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -97,10 +97,10 @@ the editor blockRender props.</p>
       <span class="token punctuation">/&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></pre><p>There are cases where instead of overwriting the defaults we just want to add new block types;
+<span class="token punctuation">}</span></code><p>There are cases where instead of overwriting the defaults we just want to add new block types;
 this can be done by using the DefaultDraftBlockRenderMap reference to create a new blockRenderMap</p>
 <p><em>example of extending default block render map:</em></p>
-<pre class="prism language-js"><span class="token keyword">const</span> blockRenderMap <span class="token operator">=</span> Immutable<span class="token punctuation">.</span><span class="token function">Map</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+<code class="prism language-js"><span class="token keyword">const</span> blockRenderMap <span class="token operator">=</span> Immutable<span class="token punctuation">.</span><span class="token function">Map</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token string">'section'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
     element<span class="token punctuation">:</span> <span class="token string">'section'</span>
   <span class="token punctuation">}</span>
@@ -119,14 +119,14 @@ this can be done by using the DefaultDraftBlockRenderMap reference to create a n
       <span class="token punctuation">/&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></pre><p>When Draft parses pasted HTML, it maps from HTML elements back into
+<span class="token punctuation">}</span></code><p>When Draft parses pasted HTML, it maps from HTML elements back into
 Draft block types. If you want to specify other HTML elements that map to a
 particular block type, you can add an array <code>aliasedElements</code> to the block config.</p>
 <p><em>example of unstyled block type alias usage:</em></p>
-<pre class="prism language-undefined"><span class="token string">'unstyled'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+<code class="prism language-undefined"><span class="token string">'unstyled'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
   element<span class="token punctuation">:</span> <span class="token string">'div'</span><span class="token punctuation">,</span>
   aliasedElements<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'p'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span></pre><h2 id="custom-block-wrappers">Custom block wrappers</h2>
+<span class="token punctuation">}</span></code><h2 id="custom-block-wrappers">Custom block wrappers</h2>
 <p>By default the html element is used to wrap block types however a react component
 can also be provided to the <em>blockRenderMap</em> to wrap the EditorBlock.</p>
 <p>During pasting or when using the
@@ -136,7 +136,7 @@ it on the <em>blockRenderMap</em> to wrap that particular block type. For exampl
 <p>Draft uses wrappers to wrap <code>&lt;li/&gt;</code> inside either <code>&lt;ol/&gt;</code> or <code>&lt;ul/&gt;</code> but wrappers can also be used
 to wrap any other custom block type</p>
 <p><em>example of extending default block render map to use a react component for a custom block:</em></p>
-<pre class="prism language-js"><span class="token keyword">class</span> <span class="token class-name">MyCustomBlock</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+<code class="prism language-js"><span class="token keyword">class</span> <span class="token class-name">MyCustomBlock</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
@@ -173,5 +173,5 @@ to wrap any other custom block type</p>
       <span class="token punctuation">/&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></pre></div><div class="docs-prevnext"><a class="docs-next" href="advanced-topics-block-components.html#content">Next →</a></div></div>
+<span class="token punctuation">}</span></code></div><div class="docs-prevnext"><a class="docs-next" href="advanced-topics-block-components.html#content">Next →</a></div></div>
 `

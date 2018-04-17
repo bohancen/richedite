@@ -23,7 +23,7 @@ styles.</p>
 <p>The <code>blockStyleFn</code> prop on <code>Editor</code> allows you to define CSS classes to
 style blocks at render time. For instance, you may wish to style <code>'blockquote'</code>
 type blocks with fancy italic text.</p>
-<pre class="prism language-js"><span class="token keyword">function</span> <span class="token function">myBlockStyleFn</span><span class="token punctuation">(</span>contentBlock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<code class="prism language-js"><span class="token keyword">function</span> <span class="token function">myBlockStyleFn</span><span class="token punctuation">(</span>contentBlock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> type <span class="token operator">=</span> contentBlock<span class="token punctuation">.</span><span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'blockquote'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token string">'superFancyBlockquote'</span><span class="token punctuation">;</span>
@@ -36,11 +36,11 @@ type blocks with fancy italic text.</p>
   <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Editor</span> <span class="token attr-name">...</span> <span class="token attr-name">blockStyleFn</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>myBlockStyleFn<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></pre><p>Then, in your own CSS:</p>
-<pre class="prism language-css"><span class="token selector">.superFancyBlockquote</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span></code><p>Then, in your own CSS:</p>
+<code class="prism language-css"><span class="token selector">.superFancyBlockquote</span> <span class="token punctuation">{</span>
   <span class="token property">color</span><span class="token punctuation">:</span> #999<span class="token punctuation">;</span>
   <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Hoefler Text'</span>, Georgia, serif<span class="token punctuation">;</span>
   <span class="token property">font-style</span><span class="token punctuation">:</span> italic<span class="token punctuation">;</span>
   <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></pre></div><div class="docs-prevnext"><a class="docs-next" href="advanced-topics-custom-block-render-map.html#content">Next →</a></div></div>
+<span class="token punctuation">}</span></code></div><div class="docs-prevnext"><a class="docs-next" href="advanced-topics-custom-block-render-map.html#content">Next →</a></div></div>
 `

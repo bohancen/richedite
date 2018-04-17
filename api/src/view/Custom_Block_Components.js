@@ -29,7 +29,7 @@ rendering for <code>ContentBlock</code> objects, based on block type, text, or o
 criteria.</p>
 <p>For instance, we may wish to render <code>ContentBlock</code> objects of type <code>'atomic'</code>
 using a custom <code>MediaComponent</code>.</p>
-<pre class="prism language-js"><span class="token keyword">function</span> <span class="token function">myBlockRenderer</span><span class="token punctuation">(</span>contentBlock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<code class="prism language-js"><span class="token keyword">function</span> <span class="token function">myBlockRenderer</span><span class="token punctuation">(</span>contentBlock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> type <span class="token operator">=</span> contentBlock<span class="token punctuation">.</span><span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'atomic'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
@@ -49,7 +49,7 @@ using a custom <code>MediaComponent</code>.</p>
   <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Editor</span> <span class="token attr-name">...</span> <span class="token attr-name">blockRendererFn</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>myBlockRenderer<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></pre><p>If no custom renderer object is returned by the <code>blockRendererFn</code> function,
+<span class="token punctuation">}</span></code><p>If no custom renderer object is returned by the <code>blockRendererFn</code> function,
 <code>Editor</code> will render the default <code>DraftEditorBlock</code> text block component.</p>
 <p>The <code>component</code> property defines the component to be used, while the optional
 <code>props</code> object includes props that will be passed through to the rendered
@@ -70,14 +70,14 @@ retrieve entity metadata to render your custom block. You may apply an entity
 key to the text within a <code>'atomic'</code> block during <code>EditorState</code> management,
 then retrieve the metadata for that key in your custom component <code>render()</code>
 code.</p>
-<pre class="prism language-js"><span class="token keyword">class</span> <span class="token class-name">MediaComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+<code class="prism language-js"><span class="token keyword">class</span> <span class="token class-name">MediaComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> <span class="token punctuation">{</span>block<span class="token punctuation">,</span> contentState<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
     <span class="token keyword">const</span> <span class="token punctuation">{</span>foo<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>blockProps<span class="token punctuation">;</span>
     <span class="token keyword">const</span> data <span class="token operator">=</span> contentState<span class="token punctuation">.</span><span class="token function">getEntity</span><span class="token punctuation">(</span>block<span class="token punctuation">.</span><span class="token function">getEntityAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment">// Return a &lt;figure&gt; or some other content using this data.</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></pre><p>The <code>ContentBlock</code> object and the <code>ContentState</code> record are made available
+<span class="token punctuation">}</span></code><p>The <code>ContentBlock</code> object and the <code>ContentState</code> record are made available
 within the custom component, along with the props defined at the top level. By
 extracting entity information from the <code>ContentBlock</code> and the <code>Entity</code> map, you
 can obtain the metadata required to render your custom component.</p>

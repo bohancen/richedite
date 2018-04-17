@@ -25,20 +25,20 @@ characters are represented by <code>OrderedSet.of('BOLD')</code>. For convenienc
 think of these <code>OrderedSet</code> objects as arrays, though in reality we aggressively
 reuse identical immutable objects.</p>
 <p>In essence, our styles are:</p>
-<pre class="prism language-js"><span class="token punctuation">[</span>
+<code class="prism language-js"><span class="token punctuation">[</span>
   <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// H</span>
   <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// e</span>
   <span class="token operator">...</span>
   <span class="token punctuation">[</span><span class="token string">'BOLD'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// w</span>
   <span class="token punctuation">[</span><span class="token string">'BOLD'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// o</span>
   <span class="token comment">// etc.</span>
-<span class="token punctuation">]</span></pre><h3 id="overlapping-styles">Overlapping Styles</h3>
+<span class="token punctuation">]</span></code><h3 id="overlapping-styles">Overlapping Styles</h3>
 <p>Now let's say that we wish to make the middle range of characters italic as well:
 "He_llo <strong>wo</strong>_<strong>rld</strong>". This operation can be performed via the
 <a href="/docs/api-reference-modifier.html">Modifier</a> API.</p>
 <p>The end result will accommodate the overlap by including <code>'ITALIC'</code> in the
 relevant <code>OrderedSet</code> objects as well.</p>
-<pre class="prism language-js"><span class="token punctuation">[</span>
+<code class="prism language-js"><span class="token punctuation">[</span>
   <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// H</span>
   <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// e</span>
   <span class="token punctuation">[</span><span class="token string">'ITALIC'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// l</span>
@@ -47,7 +47,7 @@ relevant <code>OrderedSet</code> objects as well.</p>
   <span class="token punctuation">[</span><span class="token string">'BOLD'</span><span class="token punctuation">,</span> <span class="token string">'ITALIC'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// o</span>
   <span class="token punctuation">[</span><span class="token string">'BOLD'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// r</span>
   <span class="token comment">// etc.</span>
-<span class="token punctuation">]</span></pre><p>When determining how to render inline-styled text, Draft will identify
+<span class="token punctuation">]</span></code><p>When determining how to render inline-styled text, Draft will identify
 contiguous ranges of identically styled characters and render those characters
 together in styled <code>span</code> nodes.</p>
 <h3 id="mapping-a-style-string-to-css">Mapping a style string to CSS</h3>
@@ -62,7 +62,7 @@ to define your style objects. (See
 for a live example.)</p>
 <p>For example, you may want to add a <code>'STRIKETHROUGH'</code> style. To do so, define a
 custom style map:</p>
-<pre class="prism language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>Editor<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'draft-js'</span><span class="token punctuation">;</span>
+<code class="prism language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>Editor<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'draft-js'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> styleMap <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token string">'STRIKETHROUGH'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -81,7 +81,7 @@ custom style map:</p>
       <span class="token punctuation">/&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></pre><p>When rendered, the <code>textDecoration: line-through</code> style will be applied to all
+<span class="token punctuation">}</span></code><p>When rendered, the <code>textDecoration: line-through</code> style will be applied to all
 character ranges with the <code>STRIKETHROUGH</code> style.</p>
 </div><div class="docs-prevnext"><a class="docs-next" href="advanced-topics-nested-lists.html#content">Next →</a></div></div>
 `

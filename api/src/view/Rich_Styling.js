@@ -32,7 +32,7 @@ rich styling within the top-level component.</p>
 such as Cmd+B (bold), Cmd+I (italic), and so on.</p>
 <p>We can observe and handle key commands via the <code>handleKeyCommand</code> prop, and
 hook these into <code>RichUtils</code> to apply or remove the desired style.</p>
-<pre class="prism language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>Editor<span class="token punctuation">,</span> EditorState<span class="token punctuation">,</span> RichUtils<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'draft-js'</span><span class="token punctuation">;</span>
+<code class="prism language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>Editor<span class="token punctuation">,</span> EditorState<span class="token punctuation">,</span> RichUtils<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'draft-js'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">class</span> <span class="token class-name">MyEditor</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -58,7 +58,7 @@ hook these into <code>RichUtils</code> to apply or remove the desired style.</p>
       <span class="token punctuation">/&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></pre><blockquote>
+<span class="token punctuation">}</span></code><blockquote>
 <p>handleKeyCommand</p>
 <p>The <code>command</code> argument supplied to <code>handleKeyCommand</code> is a string value, the
 name of the command to be executed. This is mapped from a DOM key event. The
@@ -74,7 +74,7 @@ the user to modify styles within the editor. In the example above, we are using
 known key commands, but we can add more complex UI to provide these rich
 features.</p>
 <p>Here's a super-basic example with a "Bold" button to toggle the <code>BOLD</code> style.</p>
-<pre class="prism language-js"><span class="token keyword">class</span> <span class="token class-name">MyEditor</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+<code class="prism language-js"><span class="token keyword">class</span> <span class="token class-name">MyEditor</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token comment">// …</span>
 
   <span class="token function">_onBoldClick</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -93,5 +93,5 @@ features.</p>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></pre></div><div class="docs-prevnext"><a class="docs-next" href="advanced-topics-entities.html#content">Next →</a></div></div>
+<span class="token punctuation">}</span></code></div><div class="docs-prevnext"><a class="docs-next" href="advanced-topics-entities.html#content">Next →</a></div></div>
 `

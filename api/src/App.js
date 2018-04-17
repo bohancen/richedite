@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Main from './router/main';
 import Nav from './router/nav';
-import logo from './logo.svg';
 import './App.css';
+import './draft.css';
 
 class App extends Component {
   render() {

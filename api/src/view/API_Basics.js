@@ -22,7 +22,7 @@ with the goal of providing a top-level API modeled on the familiar React
 <p>This approach allows the component that composes the input to have strict
 control over the state of the input, while still allowing updates to the DOM
 to provide information about the text that the user has written.</p>
-<pre class="prism language-js"><span class="token keyword">class</span> <span class="token class-name">MyInput</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+<code class="prism language-js"><span class="token keyword">class</span> <span class="token class-name">MyInput</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>value<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
@@ -31,7 +31,7 @@ to provide information about the text that the user has written.</p>
   <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>value<span class="token punctuation">}</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>onChange<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></pre><p>The top-level component can maintain control over the input state via this
+<span class="token punctuation">}</span></code><p>The top-level component can maintain control over the input state via this
 <code>value</code> state property.</p>
 <h2 id="controlling-rich-text">Controlling Rich Text</h2>
 <p>In a React rich text scenario, however, there are two clear problems:</p>
@@ -48,7 +48,7 @@ value to the top level.</p>
 including contents, cursor, and undo/redo history. All changes to content and
 selection within the editor will create new <code>EditorState</code> objects. Note that
 this remains efficient due to data persistence across immutable objects.</p>
-<pre class="prism language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>Editor<span class="token punctuation">,</span> EditorState<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'draft-js'</span><span class="token punctuation">;</span>
+<code class="prism language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>Editor<span class="token punctuation">,</span> EditorState<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'draft-js'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">class</span> <span class="token class-name">MyEditor</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -59,7 +59,7 @@ this remains efficient due to data persistence across immutable objects.</p>
   <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Editor</span> <span class="token attr-name">editorState</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>editorState<span class="token punctuation">}</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>onChange<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></pre><p>For any edits or selection changes that occur in the editor DOM, your <code>onChange</code>
+<span class="token punctuation">}</span></code><p>For any edits or selection changes that occur in the editor DOM, your <code>onChange</code>
 handler will execute with the latest <code>EditorState</code> object based on those changes.</p>
 </div><div class="docs-prevnext"><a class="docs-next" href="quickstart-rich-styling.html#content">Next →</a></div></div>
 `

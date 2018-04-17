@@ -71,7 +71,7 @@ For instance, using
 <a href="https://github.com/facebookincubator/create-react-app">create-react-app</a> and
 targeting ie11, <code>src/index.js</code> is probably a good spot to import your polyfill:</p>
 <p><strong>src/index.js</strong></p>
-<pre class="prism language-undefined"><span class="token keyword">import</span> <span class="token string">'babel-polyfill'</span><span class="token punctuation">;</span>
+<code class="prism language-undefined"><span class="token keyword">import</span> <span class="token string">'babel-polyfill'</span><span class="token punctuation">;</span>
 <span class="token comment">// or</span>
 <span class="token keyword">import</span> <span class="token string">'es6-shim'</span><span class="token punctuation">;</span>
 
@@ -83,7 +83,7 @@ targeting ie11, <code>src/index.js</code> is probably a good spot to import your
 ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>App</span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">,</span>
   document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span></pre><h3 id="mobile-not-yet-supported">Mobile Not Yet Supported</h3>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code><h3 id="mobile-not-yet-supported">Mobile Not Yet Supported</h3>
 <p>Draft.js is moving towards full mobile support, but does not officially support
 mobile browsers at this point. There are some known issues affecting Android and
 iOS - see issues tagged

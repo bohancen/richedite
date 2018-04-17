@@ -28,7 +28,11 @@
 }
 
 
-.continer-box{overflow:hidden;margin:0 2%;}
+.continer-box{overflow:hidden;max-width: 800px;margin:0 auto;}
 .nav-docs{float:left;width:20%;}
-.main-right{float:right;width:80%;}
-.cur{color: red}
+.main-right{float:right;width:75%;}
+.nav-docs a.cur{color: red;font-weight: bold}
+
+
+
+

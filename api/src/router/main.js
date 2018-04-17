@@ -3,8 +3,8 @@ import { Switch, Route } from 'react-router-dom'
 
 import Home from '../view/Home'
 
+
 import Overview from '../view/Overview'
-import Roster from '../view/Roster'
 import API_Basics from '../view/API_Basics'
 import Rich_Styling from '../view/Rich_Styling'
 import Entities from '../view/Entities'
@@ -20,6 +20,21 @@ import Nested_Lists from '../view/Nested_Lists'
 import Text_Direction from '../view/Text_Direction'
 import EditorState_Race_Conditions from '../view/EditorState_Race_Conditions'
 import Issues_and_Pitfalls from '../view/Issues_and_Pitfalls'
+
+import Editor_Component from '../view/Editor_Component'
+import EditorChangeType from '../view/EditorChangeType'
+import EditorState from '../view/EditorState'
+import ContentState from '../view/ContentState'
+import ContentBlock from '../view/ContentBlock'
+import CharacterMetadata from '../view/CharacterMetadata'
+import Entity from '../view/Entity'
+import SelectionState from '../view/SelectionState'
+import CompositeDecorator from '../view/CompositeDecorator'
+import Data_Conversion from '../view/Data_Conversion'
+import RichUtils from '../view/RichUtils'
+import AtomicBlockUtils from '../view/AtomicBlockUtils'
+import KeyBindingUtil from '../view/KeyBindingUtil'
+import Modifier from '../view/Modifier'
 
 const Main = () => (
   <div className="main-right">
@@ -41,6 +56,21 @@ const Main = () => (
       <Route path='/Text_Direction' component={Text_Direction}/>
       <Route path='/EditorState_Race_Conditions' component={EditorState_Race_Conditions}/>
       <Route path='/Issues_and_Pitfalls' component={Issues_and_Pitfalls}/>
+
+      <Route exact path='/Editor_Component' component={Editor_Component} />
+      <Route exact path='/EditorChangeType' component={EditorChangeType} />
+      <Route exact path='/EditorState' component={EditorState} />
+      <Route exact path='/ContentState' component={ContentState} />
+      <Route exact path='/ContentBlock' component={ContentBlock} />
+      <Route exact path='/CharacterMetadata' component={CharacterMetadata} />
+      <Route exact path='/Entity' component={Entity} />
+      <Route exact path='/SelectionState' component={SelectionState} />
+      <Route exact path='/CompositeDecorator' component={CompositeDecorator} />
+      <Route exact path='/Data_Conversion' component={Data_Conversion} />
+      <Route exact path='/RichUtils' component={RichUtils} />
+      <Route exact path='/AtomicBlockUtils' component={AtomicBlockUtils} />
+      <Route exact path='/KeyBindingUtil' component={KeyBindingUtil} />
+      <Route exact path='/Modifier' component={Modifier} />
     </Switch>
   </div>
 )

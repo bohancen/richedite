@@ -50,7 +50,7 @@ add rich rendering to your editor based on entity metadata.</p>
 three properties above as arguments. This method returns a <code>ContentState</code> record updated to include the newly created entity, then you can call <code>contentState.getLastCreatedEntityKey</code> to get the key of the newly created entity record.</p>
 <p>This key is the value that should be used when applying entities to your
 content. For instance, the <code>Modifier</code> module contains an <code>applyEntity</code> method:</p>
-<pre class="prism language-js"><span class="token keyword">const</span> contentState <span class="token operator">=</span> editorState<span class="token punctuation">.</span><span class="token function">getCurrentContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<code class="prism language-js"><span class="token keyword">const</span> contentState <span class="token operator">=</span> editorState<span class="token punctuation">.</span><span class="token function">getCurrentContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> contentStateWithEntity <span class="token operator">=</span> contentState<span class="token punctuation">.</span><span class="token function">createEntity</span><span class="token punctuation">(</span>
   <span class="token string">'LINK'</span><span class="token punctuation">,</span>
   <span class="token string">'MUTABLE'</span><span class="token punctuation">,</span>
@@ -61,14 +61,14 @@ content. For instance, the <code>Modifier</code> module contains an <code>applyE
   contentStateWithEntity<span class="token punctuation">,</span>
   selectionState<span class="token punctuation">,</span>
   entityKey
-<span class="token punctuation">)</span><span class="token punctuation">;</span></pre><p>For a given range of text, then, you can extract its associated entity key by using
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code><p>For a given range of text, then, you can extract its associated entity key by using
 the <code>getEntityAt()</code> method on a <code>ContentBlock</code> object, passing in the target
 offset value.</p>
-<pre class="prism language-js"><span class="token keyword">const</span> blockWithLinkAtBeginning <span class="token operator">=</span> contentState<span class="token punctuation">.</span><span class="token function">getBlockForKey</span><span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<code class="prism language-js"><span class="token keyword">const</span> blockWithLinkAtBeginning <span class="token operator">=</span> contentState<span class="token punctuation">.</span><span class="token function">getBlockForKey</span><span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> linkKey <span class="token operator">=</span> blockWithLinkAtBeginning<span class="token punctuation">.</span><span class="token function">getEntityAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> contentState <span class="token operator">=</span> editorState<span class="token punctuation">.</span><span class="token function">getCurrentContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> linkInstance <span class="token operator">=</span> contentState<span class="token punctuation">.</span><span class="token function">getEntity</span><span class="token punctuation">(</span>linkKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token punctuation">{</span>url<span class="token punctuation">}</span> <span class="token operator">=</span> linkInstance<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre><h2 id="mutability">"Mutability"</h2>
+<span class="token keyword">const</span> <span class="token punctuation">{</span>url<span class="token punctuation">}</span> <span class="token operator">=</span> linkInstance<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><h2 id="mutability">"Mutability"</h2>
 <p>Entities may have one of three "mutability" values. The difference between them
 is the way they behave when the user makes edits to them.</p>
 <p>Note that <code>DraftEntityInstance</code> objects are always immutable Records, and this
