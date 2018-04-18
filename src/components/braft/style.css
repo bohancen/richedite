@@ -1,0 +1,11 @@
+/* .BraftEditor-controlBar{display:none;} */
+
+/* html,body{height:100%;background-color: #eee;}
+#root,.demo{height:100%;} */
+html,body{background-color: #eee;}
+
+
+
+.BraftEditor-content{}
+.BraftEditor-container .public-DraftEditor-content{padding:0;}
+[data-contents="true"]{border:15px solid #eee}

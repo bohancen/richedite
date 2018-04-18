@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+
 // import logo from './logo.svg';
 
 // import './App.css';
-import './list.css';
+// import './list.css';
 
 // import Li from "./Li";
 
@@ -10,8 +10,17 @@ import './list.css';
 // import Data from './data'
 
 
-import Comment from './comment/braft/index';
-import RandomKey from './RandomKey';
+// import RandomKey from './RandomKey';
+
+import React, { Component } from 'react';
+// import Bold from "./components/bold/";
+// import Bold from "./components/bold";
+import './comment/Draft.css';
+import Draft from "./components/media";
+// import Draft from "./components/braft";
+
+
+
 
 class App extends Component {
   // constructor(props){
@@ -30,7 +39,7 @@ class App extends Component {
     //   </div>
     // );
     return (
-      <Comment key="RandomKey()" />
+      <Draft />
     )
   }
 }
