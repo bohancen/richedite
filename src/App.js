@@ -15,9 +15,9 @@
 import React, { Component } from 'react';
 // import Bold from "./components/bold/";
 // import Bold from "./components/bold";
-import './comment/Draft.css';
-import Draft from "./components/media";
 // import Draft from "./components/braft";
+import './comment/Draft.css';
+import Draft from "./components/rich";
 
 
 
